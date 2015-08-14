@@ -1,9 +1,23 @@
-% Morten Hels
-% Initiates the browser.
-function browser = browse()
+%{
+Prompts the user to choose a subfolder located in path.
+and loads the selected folder.
+Input
+-----
+    - path: Folder in which to search for subfolders. Defaults to current
+            working directory.
+
+Output
+------
+    - browser: Folderbrowser object containing a list of data folders found
+               in subfolder.
+%}
+function browser = browse(path)
+    if (~exist('path', 'var'))
+        path = '.';
+    end
     format compact
     dashed_line = '----------------------------------------------------------';
-    subfolder_names = hels.get_subfolder_names();
+    subfolder_names = hels.get_subfolder_names(path);
     n_folders = size(subfolder_names, 2);
     if n_folders>1
         temp_cell = cell(1, n_folders);
