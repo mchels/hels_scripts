@@ -1,0 +1,38 @@
+{
+    "bias_spec": {
+        "use": "Bias spec with bias comparable to charging energy",
+        "related": ["gap_spec"],
+        "spellings": ["bias_spec",
+                      "biasspec",
+                      "bias spec",
+        ],
+    },
+    "ex_spec": {
+        "use": "Excitation spectroscopy.",
+        "related": [],
+    },
+    "gap_spec": {
+        "use": "Bias spec in narrow bias range to show SC gap",
+        "related": ["bias_spec"],
+    },
+    "gate_sweep": {
+        "use": "1D gate sweep",
+        "related": [],
+    },
+    "bias_sweep": {
+        "use": "1D bias sweep",
+        "related": [],
+    },
+    "ins_set": {
+        "use": "Sweep for determining instrument settings.",
+        "related": [],
+    },
+    "gt_vs_gt": {
+        "use": "Gate vs gate sweeps used in, e.g., CPS sweeps",
+        "related": [],
+    },
+    "gate_stab": {
+        "use": "Sweep to determine whether a gate drifts in time",
+        "related": [],
+    },
+}
