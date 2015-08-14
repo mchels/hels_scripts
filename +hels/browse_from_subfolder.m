@@ -54,6 +54,5 @@ function browser = browse_from_subfolder(path)
                        'Continuing execution without it...'];
         warning(sprintf(warn_string));
     end
-    browser.set_editor('C:\Program Files (x86)\Notepad++\notepad++.exe');
     set(0, 'DefaultFigureWindowStyle', 'docked');
 end
