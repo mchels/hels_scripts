@@ -1,10 +1,7 @@
 % Morten Hels
 % Initiates the browser.
-function browser = browse(window_title)
+function browser = browse()
     format compact
-    if (exist('window_title', 'var'))
-        hels.window_title(window_title);
-    end
     dashed_line = '----------------------------------------------------------';
     subfolder_names = hels.get_subfolder_names();
     n_folders = size(subfolder_names, 2);
