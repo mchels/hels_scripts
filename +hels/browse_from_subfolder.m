@@ -2,6 +2,7 @@
 Prompts the user to choose a subfolder located in path and loads the selected
 folder. If there is only one subfolder in path then that subfolder is loaded
 automatically.
+
 Input
 -----
     - path: Folder in which to search for subfolders. Defaults to current
@@ -11,6 +12,7 @@ Output
 ------
     - browser: Folderbrowser object containing a list of data folders found
                in subfolder.
+
 %}
 function browser = browse_from_subfolder(path)
     if (~exist('path', 'var'))
