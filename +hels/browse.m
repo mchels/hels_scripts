@@ -1,6 +1,7 @@
 %{
-Prompts the user to choose a subfolder located in path.
-and loads the selected folder.
+Prompts the user to choose a subfolder located in path and loads the selected
+folder. If there is only one subfolder in path then that subfolder is loaded
+automatically.
 Input
 -----
     - path: Folder in which to search for subfolders. Defaults to current
@@ -11,7 +12,7 @@ Output
     - browser: Folderbrowser object containing a list of data folders found
                in subfolder.
 %}
-function browser = browse(path)
+function browser = browse_from_subfolder(path)
     if (~exist('path', 'var'))
         path = '.';
     end
@@ -38,7 +39,7 @@ function browser = browse(path)
         sel_folder_n = 1;
     end
     sel_folder_name = subfolder_names{sel_folder_n};
-    full_path = fullfile(pwd, sel_folder_name);
+    full_path = fullfile(path, sel_folder_name);
     disp('Loading');
     disp(full_path);
     browser = qd.gui.FolderBrowser(full_path);
