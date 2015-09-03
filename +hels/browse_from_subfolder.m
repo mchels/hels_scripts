@@ -42,7 +42,9 @@ function browser = browse_from_subfolder(path)
     full_path = fullfile(path, sel_folder_name);
     disp('Loading');
     disp(full_path);
+    num_of_views = input('How many views do you want?\n');
     browser = qd.gui.FolderBrowser(full_path);
+    browser.num_of_views = num_of_views;
     try
         exp.update_browser(browser);
     catch ME
