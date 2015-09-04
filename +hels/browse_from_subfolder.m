@@ -31,7 +31,7 @@ function browser = browse_from_subfolder(path)
         prompt_string = strjoin(temp_cell, '');
         disp(dashed_line);
         disp('Showing subfolders in directory');
-        disp(pwd);
+        disp(path);
         disp('Input the number corresponding to the folder you want to load...');
         sel_folder_n = input(prompt_string);
     elseif n_folders==1
